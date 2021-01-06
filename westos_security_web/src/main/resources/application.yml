@@ -2,7 +2,11 @@ server:
   port: 80
   servlet:
     session:
-      timeout: 1m
+      timeout: 10m
+      cookie:
+        name: JSESSIONID
 spring:
   thymeleaf:
     cache: false #关闭thymeleaf缓存
+  session:
+    store-type: none #使用redis来存储session

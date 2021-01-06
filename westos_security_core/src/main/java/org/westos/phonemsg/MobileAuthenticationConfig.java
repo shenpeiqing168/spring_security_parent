@@ -10,6 +10,7 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.RememberMeServices;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 import org.springframework.stereotype.Component;
 
 /**
@@ -39,6 +40,8 @@ public class MobileAuthenticationConfig
         mobileAuthenticationFilter.setAuthenticationFailureHandler(authenticationFailureHandler);
         //设置记住我
         mobileAuthenticationFilter.setRememberMeServices(http.getSharedObject(RememberMeServices.class));
+        //设置session管理,防止用户名登录上，再用手机登录上
+        mobileAuthenticationFilter.setSessionAuthenticationStrategy(http.getSharedObject(SessionAuthenticationStrategy.class));
         //
         MobileAuthenticationProvider mobileAuthenticationProvider = new MobileAuthenticationProvider();
         mobileAuthenticationProvider.setUserDetailsService(mobileUserDetailsService);

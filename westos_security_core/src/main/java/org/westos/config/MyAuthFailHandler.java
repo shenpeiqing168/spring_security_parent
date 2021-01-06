@@ -34,7 +34,12 @@ public class MyAuthFailHandler extends SimpleUrlAuthenticationFailureHandler {
         //截取？之前的路径
         String lastUrl = StringUtils.substringBefore(referer, "?");
         logger.info("上一次请求的路径 ：" + lastUrl);
-        setDefaultFailureUrl(lastUrl + "?error");
+        if (httpServletRequest.getParameter("toAuthentication") != null) {
+            setDefaultFailureUrl("/login/page");
+        } else {
+            setDefaultFailureUrl(lastUrl + "?error");
+        }
+
         super.onAuthenticationFailure(httpServletRequest, httpServletResponse, e);
     }
 }

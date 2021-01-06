@@ -22,18 +22,18 @@
             <artifactId>westos_security_core</artifactId>
             <version>${westos-security.version}</version>
         </dependency>
-        <!--mybatis-plus启动器
-                <dependency>
-                    <groupId>com.baomidou</groupId>
-                    <artifactId>mybatis-plus-boot-starter</artifactId>
-                </dependency>
-                -->
-        <!--druid连接池
+        <!--mybatis-plus启动器-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <!--druid连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
         </dependency>
-		-->
 
         <!-- thymeleaf 模块启动器-->
         <dependency>
@@ -41,12 +41,12 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-        <!--对Thymeleaf添加Spring Security标签支持
+        <!--对Thymeleaf添加Spring Security标签支持-->
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity5</artifactId>
         </dependency>
-        -->
+
 
         <!-- application.yml 配置处理器-->
         <dependency>
@@ -65,6 +65,34 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
+
+        <!--bootstrap-table-->
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>bootstrap-table</artifactId>
+            <version>1.14.1</version>
+        </dependency>
+
+        <!--jquery-treeGrid -->
+        <dependency>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>jquery-treegrid</artifactId>
+            <version>0.3.0</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jquery</artifactId>
+                    <groupId>org.webjars.bower</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--layer -->
+        <dependency>
+            <groupId>org.webjars.bowergithub.sentsin</groupId>
+            <artifactId>layer</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
     </dependencies>
 
 </project>

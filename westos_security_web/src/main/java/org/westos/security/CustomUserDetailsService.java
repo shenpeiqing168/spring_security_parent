@@ -27,7 +27,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         }
         String password = passwordEncoder.encode("123");
         //查询用户
-        User user = new User(username, password, AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+        User user = new User(username, password, AuthorityUtils.commaSeparatedStringToAuthorityList("sys:user,sys:role,sys:role:add"));
         return user;
     }
 }
