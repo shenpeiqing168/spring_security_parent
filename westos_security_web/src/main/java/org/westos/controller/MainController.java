@@ -17,6 +17,7 @@ public class MainController {
     @RequestMapping({"/index", "/", ""})
     public String main(Map map) {
         System.out.println("跳转到主页");
+        //获取用户名，回显到首页
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (principal != null && principal instanceof UserDetails) {
             UserDetails userDetails = (UserDetails) principal;

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.westos.mapper.SysRoleMapper">
+    <select id="selectPage" resultType="org.westos.bean.SysRole">
+        SELECT `id`,
+               `name`,
+               `remark`,
+               `create_date`,
+               `update_date`
+        FROM sys_role WHERE 1 = 1
+        <if test="p.name != null and p.name != ''">
+            AND `name` like CONCAT('%', #{p.name}, '%')
+        </if>
+    </select>
+    <!--    根据角色id 删除中间表中的数据-->
+    <delete id="deleteRolePermissionByRoleId">
+        DELETE
+        FROM sys_role_permission
+        WHERE role_id = #{roleId}
+    </delete>
+    <!--保存角色与资源权限关系数据
+  foreach 标签说明：
+    item "每个元素"， index "索引"， separator 标签体中整体内容以逗号分隔：(1, 1) , (1, 2)
+-->
+    <insert id="saveRolePermission">
+        INSERT INTO sys_role_permission(role_id, permission_id) VALUES
+        <foreach collection="perIds" item="item" index="index" separator=",">
+            (#{roleId}, #{item})
+        </foreach>
+    </insert>
+
+    <!--根据用户id查询该用户的所拥有的角色-->
+    <select id="findByUserId" resultType="org.westos.bean.SysRole">
+        SELECT r.*
+        FROM sys_role r
+                     JOIN sys_user_role ur ON r.id = ur.role_id
+                     JOIN sys_user u ON ur.user_id = u.id
+        WHERE u.id = #{userId}
+    </select>
+</mapper>

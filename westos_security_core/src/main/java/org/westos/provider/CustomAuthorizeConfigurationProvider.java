@@ -15,6 +15,6 @@ public class CustomAuthorizeConfigurationProvider implements AuthorizeConfiggure
     @Override
     public void configure(ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry config) {
         //设置跳转登录页面的请求，不要拦截，图像验证码，不要拦截
-        config.antMatchers("/login/page", "/code/image", "/mobile/page", "/code/mobile").permitAll();
+        config.antMatchers("/login/page", "/code/image", "/mobile/page", "/code/mobile", "/druid/*").permitAll();
     }
 }

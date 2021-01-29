@@ -1,0 +1,223 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [],
+              "code": "sys:user:list",
+              "createDate": 1691464271000,
+              "icon": "",
+              "id": 19,
+              "name": "列表",
+              "parentId": 18,
+              "parentName": "根菜单",
+              "remark": "员工列表",
+              "type": 2,
+              "updateDate": 1691464271000,
+              "url": ""
+            },
+            {
+              "children": [],
+              "code": "sys:user:add",
+              "createDate": 1691464271000,
+              "icon": "",
+              "id": 20,
+              "name": "新增",
+              "parentId": 18,
+              "parentName": "根菜单",
+              "remark": "新增用户",
+              "type": 2,
+              "updateDate": 1691565988000,
+              "url": ""
+            },
+            {
+              "children": [],
+              "code": "sys:user:edit",
+              "createDate": 1691464271000,
+              "icon": "",
+              "id": 21,
+              "name": "修改",
+              "parentId": 18,
+              "parentName": "根菜单",
+              "remark": "修改用户",
+              "type": 2,
+              "updateDate": 1691565988000,
+              "url": ""
+            },
+            {
+              "children": [],
+              "code": "sys:user:delete",
+              "createDate": 1691464271000,
+              "icon": "",
+              "id": 22,
+              "name": "删除",
+              "parentId": 18,
+              "parentName": "根菜单",
+              "remark": "删除用户",
+              "type": 2,
+              "updateDate": 1691565988000,
+              "url": ""
+            }
+          ],
+          "code": "sys:user",
+          "createDate": 1691464271000,
+          "icon": "fa fa-users",
+          "id": 18,
+          "name": "用户管理",
+          "parentId": 17,
+          "parentName": "根菜单",
+          "type": 1,
+          "updateDate": 1691565988000,
+          "url": "/user"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "code": "sys:role:list",
+              "createDate": 1691464271000,
+              "id": 24,
+              "name": "列表",
+              "parentId": 23,
+              "parentName": "根菜单",
+              "remark": "角色列表",
+              "type": 2,
+              "updateDate": 1691464271000
+            },
+            {
+              "children": [],
+              "code": "sys:role:add",
+              "createDate": 1691464271000,
+              "icon": "",
+              "id": 25,
+              "name": "新增",
+              "parentId": 23,
+              "parentName": "根菜单",
+              "remark": "新增角色",
+              "type": 2,
+              "updateDate": 1691565988000,
+              "url": ""
+            },
+            {
+              "children": [],
+              "code": "sys:role:edit",
+              "createDate": 1691464271000,
+              "icon": "",
+              "id": 26,
+              "name": "修改",
+              "parentId": 23,
+              "parentName": "根菜单",
+              "remark": "修改角色",
+              "type": 2,
+              "updateDate": 1691565988000,
+              "url": ""
+            },
+            {
+              "children": [],
+              "code": "sys:role:delete",
+              "createDate": 1691464271000,
+              "icon": "",
+              "id": 27,
+              "name": "删除",
+              "parentId": 23,
+              "parentName": "根菜单",
+              "remark": "删除角色",
+              "type": 2,
+              "updateDate": 1691565988000,
+              "url": ""
+            }
+          ],
+          "code": "sys:role",
+          "createDate": 1691464271000,
+          "icon": "fa fa-user-secret",
+          "id": 23,
+          "name": "角色管理",
+          "parentId": 17,
+          "parentName": "根菜单",
+          "type": 1,
+          "updateDate": 1691565988000,
+          "url": "/role"
+        },
+        {
+          "children": [
+            {
+              "children": [],
+              "code": "sys:permission:list",
+              "createDate": 1691464271000,
+              "id": 29,
+              "name": "列表",
+              "parentId": 28,
+              "parentName": "根菜单",
+              "remark": "权限列表",
+              "type": 2,
+              "updateDate": 1691464271000
+            },
+            {
+              "children": [],
+              "code": "sys:permission:add",
+              "createDate": 1691464271000,
+              "id": 30,
+              "name": "新增",
+              "parentId": 28,
+              "parentName": "根菜单",
+              "remark": "新增权限",
+              "type": 2,
+              "updateDate": 1691565988000,
+              "url": ""
+            },
+            {
+              "children": [],
+              "code": "sys:permission:edit",
+              "createDate": 1691464271000,
+              "id": 31,
+              "name": "修改",
+              "parentId": 28,
+              "parentName": "根菜单",
+              "remark": "修改权限",
+              "type": 2,
+              "updateDate": 1691565988000,
+              "url": ""
+            },
+            {
+              "children": [],
+              "code": "sys:permission:delete",
+              "createDate": 1691464271000,
+              "icon": "",
+              "id": 32,
+              "name": "删除",
+              "parentId": 28,
+              "parentName": "根菜单",
+              "remark": "删除权限",
+              "type": 2,
+              "updateDate": 1691565988000,
+              "url": ""
+            }
+          ],
+          "code": "sys:permission",
+          "createDate": 1691464271000,
+          "icon": "fa fa-cog",
+          "id": 28,
+          "name": "权限管理",
+          "parentId": 17,
+          "parentName": "根菜单",
+          "type": 1,
+          "updateDate": 1691565988000,
+          "url": "/permission"
+        }
+      ],
+      "code": "sys:manage",
+      "createDate": 1691464271000,
+      "icon": "fa fa-cogs",
+      "id": 17,
+      "name": "系统管理",
+      "parentId": 0,
+      "parentName": "根菜单",
+      "type": 1,
+      "updateDate": 1691565988000
+    }
+  ],
+  "message": "成功"
+}

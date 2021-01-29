@@ -1,20 +1,21 @@
-package org.westos.bean;
+package org.westos.utils;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 /**
- * 权限实体类
+ * @Author: ShenMouMou
+ * @Company: 西部开源教育科技有限公司
+ * @Description: 简简单单，只为教育。
+ * @Date: 2021/1/8 14:17
  */
 @Data
-public class SysPermission implements Serializable {
-
+public class TreeNode {
     @TableId(type = IdType.AUTO)
     private Long id;
 
@@ -47,9 +48,9 @@ public class SysPermission implements Serializable {
      * 左侧菜单渲染时要用
      * 这个集合就是用来装，该菜单的所有子菜单
      */
-    // @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @TableField(exist = false)
-    private List<SysPermission> children;
+    private List<TreeNode> children;
+
     /**
      * 所有子权限 URL 集合
      * 左侧菜单渲染时要用
